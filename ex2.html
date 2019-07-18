@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercicio 2</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+</head>
+<body>
+        <h1 id="h1">My Header</h1>
+
+        <form action="">
+            <input type="numeric" id="valor">
+            
+          
+        </form>
+        <button onclick="cor()">ok</button>
+        
+      
+
+    <!--Exercıcio 2 Considere o seguinte trecho:
+    < h1 id=”h1”>My Header< /h1 >
+    Faca uma funcao cor que receba uma valor inteiro x e partir deste a funcao
+    devera deixar o header acima em azul se x for zero, em vermelho se x for um
+    e em amarelo se x for dois. Se o valor recebido x nao for nenhum destes, o
+    conteudo string do header devera ser mudado para erro.-->
+    
+        <script>
+
+
+            function cor(){
+            var h1 = document.querySelector('#h1')
+            var valor = document.querySelector('#valor')
+            if(valor.value == 0){ 
+               h1.style.backgroundColor = "blue"
+            
+
+            }else if(valor.value == 1){
+                h1.style.backgroundColor = "red"
+
+            }else if(valor.value == 2){
+                h1.style.backgroundColor = "yellow"
+
+            }else{
+                h1.innerHTML = "ERRO!!"
+            }
+        
+            }       
+
+
+            
+        </script>
+</body>
+</html>
