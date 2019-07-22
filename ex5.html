@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercicio 5 - lista 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <button onclick="teste()">ok</button>
+
+    <!--Uma funcao que recebe, via parametro, um vetor de numeros e retorne
+        a quantidade de pares. Use aqui o % (mod).
+    -->
+
+    
+    <script>
+        function teste(v){
+            v = [1,2,3,4,5,6]
+            var soma = 0
+            var qt = 0
+            for(var i = 0; i<=v.length; i++){
+               if(v[i]%2==0){
+                qt ++
+                soma = soma + v[i]
+               }
+               
+
+            }
+            console.log("O vetor  " +"[" + v + "]" + " tem " + qt + " numeros pares")
+            console.log("A soma dos numeros pares eh " + soma)
+        
+
+        }
+    </script>
+</body>
+</html>
