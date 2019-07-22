@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercicio 4 - lista 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+</head>
+<body>
+    <p id="a1">Ola mundao</p>
+    <p id="a2">Mundo!</p>
+
+    <button onclick="cap()">ok</button>
+
+
+    <!--Uma funcao que capture dois conteudos string de paragrafos
+        em html com ids valendo ’a1’ e ’a2’. O paragrafo com o maior numero de
+        letras devera ter a fonte verde e o menor vermelho. Dica: o atributo length
+        de uma string fornece a quantidade de caracteres.-->
+    
+
+    <script>
+        function cap(){
+            var a1 = document.querySelector("#a1");
+            var a2 = document.querySelector("#a2");
+            var tamanhoa1 = a1.innerText;
+            var tamanhoa2 = a2.innerText;
+                if(tamanhoa1.length<tamanhoa2.length){
+                    a1.style.color = "red"
+                    a2.style.color = "green"
+                } else{
+                    a1.style.color = "green"
+                    a2.style.color = "red"
+                }
+        }
+
+
+    </script>
+</body>
+</html>
