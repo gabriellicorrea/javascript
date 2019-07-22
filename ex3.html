@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exericicio 3 da Lista 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+   
+</head>
+<body>
+    <li>Ola, mundo</li>
+    <li>com</li>
+    <li>Javascript!</li>
+    <li>:)</li>
+
+    <button onclick="lis()">oks</button>
+    
+    <!--Faca uma funcao que escreva no documento, via document.write(),
+    o conteudo de todos os elementos li de um documento html.-->
+
+
+
+    <script>
+        function lis(){
+            var li = document.querySelectorAll("li");
+            for(var i=0; i<li.length; i++){
+                document.write(li[i].innerHTML+ " ");
+            }   
+        }
+    </script>
+</body>
+</html>
