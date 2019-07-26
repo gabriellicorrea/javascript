@@ -9,9 +9,13 @@
 <body>
 
     <button onclick="teste()">ok</button>
-
+    <button onclick="inverter()">ok1</button>
     <!--Uma funcao que recebe, via parametro, um vetor de numeros e retorne
         a quantidade de pares. Use aqui o % (mod).
+
+        Uma funcao que recebe, uma string e a retorne em ordem
+        inversa. Exemplo se recebermos ’SANTOS’ devolvemos ’SOTNAS’.
+
     -->
 
     
@@ -30,9 +34,20 @@
             }
             console.log("O vetor  " +"[" + v + "]" + " tem " + qt + " numeros pares")
             console.log("A soma dos numeros pares eh " + soma)
+        }
+
+
+
+        function inverter(s) {
+            var inverter = prompt("Digite o texto: ")
+                inverter = inverter.split("");
+                normal = inverter.reverse().join("");
+                document.write("Seu teste de tras para frete eh:  "+"<br>" +normal)
+        }
         
 
-        }
+
+
     </script>
 </body>
 </html>
