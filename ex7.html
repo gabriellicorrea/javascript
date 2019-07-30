@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Exercicio 7 - lista 01</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--Exercıcio 7 Faca funcoes para o que esta se pedindo:
+        1. Uma funcao que capture todos os paragrafos de um documento e mostre
+            o conteudo deles no proprio documento.
+        2. Um botao de valor inicial OK em html que ao ser clicado seu nome e
+            mudado para ”Click”. Se for clicado novamente o valor volta a ser OK.
+    -->
+        <p>Oiii,</p>
+        <p>tudo</p>
+        <p>bem?</p>
+        <button onclick="teste()">teste</button>
+        <button id="button" onclick="ok()">ok</button>
+    <script>
+        function teste(){
+            var ps = document.querySelectorAll("p");
+
+            for(var i=0; i<=ps.length; i++){
+                document.write(ps[i].innerHTML+ " ");
+            }
+        }
+
+        function ok(){
+            var botao = document.getElementById("button")
+      
+            if(botao.innerText=="ok"){
+                botao.innerText="click";
+            }else{
+                botao.innerText="ok";
+            }
+        }
+    </script>
+</body>
+</html>
