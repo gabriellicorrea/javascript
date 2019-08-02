@@ -13,48 +13,51 @@
         numa pagina html o conteudo em uma tabela.
     -->
     <button onclick="teste()">ok</button>
+    <div class="tabela"></div>
     
 
         <script>
             function teste(){
-                var strings = ['Bom ', 'dia ', 'mundo!!']
-                var body = document.getElementsByTagName("body")[0];
-
-    // creates a <table> element and a <tbody> element
-    var tbl     = document.createElement("table");
-    var tblBody = document.createElement("tbody");
-
-    // creating all cells
-    for (var j = 0; j < 2; j++) {
-    // creates a table row
-    var row = document.createElement("tr");
-
-    for (var i = 0; i < 2; i++) {
-        // Create a <td> element and a text node, make the text
-        // node the contents of the <td>, and put the <td> at
-        // the end of the table row
-        var cell = document.createElement("td");
-        var cellText = document.createTextNode("cell is row "+j+", column "+i);
-        cell.appendChild(cellText);
-        row.appendChild(cell);
-    }
-
-
-        tblBody.appendChild(row);
-    }
-
-        // put the <tbody> in the <table>
-        tbl.appendChild(tblBody);
-        // appends <table> into <body>
-        body.appendChild(tbl);
-        // sets the border attribute of tbl to 2;
-        tbl.setAttribute("border", "2");
-            }
+                var strings = ['Bom', 'dia,', 'mundo!!']
+                
+                 
+            var table = document.createElement("table");
+            var tHead = document.createElement("thead");
+            var trowh = document.createElement("tr");
+            var thstring= document.createElement("th");
             
-        
-        </script>
+            thstring.innerHTML = "Strings";
+            
+            
+            var tBody = document.createElement("tbody");
+            
+            //for (var i=0; i < vetObj.length; i++) {
+                var tr = document.createElement("tr");
+                var tdstring1 = document.createElement("td");
+                var tdstring2 = document.createElement("td");
+                var tdstring3 = document.createElement("td");
+            
+                tdstring1.innerHTML= strings[0];
+                tdstring2.innerHTML= strings[1];
+                tdstring3.innerHTML = strings[2];
+                tr.appendChild(tdstring1);
+                tr.appendChild(tdstring2);
+                tr.appendChild(tdstring3);
+
+                tBody.appendChild(tr);
+
+            //}
+            tHead.appendChild(thstring);
+            table.appendChild(tHead);
+            table.appendChild(tBody);
+            var div = document.querySelector(".tabela");
+            div.appendChild(table);
+        }
 
 
+
+</script>
+    
 
 </body>
 </html>
