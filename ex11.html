@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex 10</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <button onclick="qtd()">ok</button>
+
+    <div class="tabela"></div>
+    
+
+    <!--Um aluno da FATEC cursando uma disciplina de criptografia
+        decidiu levantar a quantidade de letras ’A’ maiusculas e minusculas de palavras em um conjunto de palavras. Para ajud´a-lo vocˆe dever´a implementar as
+        seguintes funcoes em javascript:
+
+        1. Uma funcao que recebe via parametro uma string e retorna e quantidade de letras ’A’ e ’a’;
+
+
+        2. Uma funcao que escreve em html uma tabela de tres colunas onde a
+            primeira coluna devera conter a palavra, a segunda a quantidade de letras ’A’ e a terceira uma porcentagem de letras ’A’ em rela¸c˜ao ao total
+            de letras da palavra a partir de um vetor p de strings recebido via parˆametro. Os headers deverao ser: palavra, qtde de letras e porcentagem.
+            OBS: Para se obter a porcentagem divida o numero de letras ’A’ pelo
+            total de letras das palavras, multiplique por 100 e concatene ’% ’.
+
+    -->
+
+        <script>
+            function qtd(palavras){
+                palavras="palavras";
+                qtd=0;
+                
+                for(var i=0; i<=palavras.length; i++){
+                    if(palavras[i]=="A" || palavras[i]=="a"){
+                    qtd= qtd+1;
+                    }
+                } 
+               // document.write(qtd)
+                var porc=qtd/palavras.length
+                //document.write("a porcentagem eh  ...."+porc+ "%")
+            
+            var table = document.createElement("table");
+            var tHead = document.createElement("thead");
+            var trowh = document.createElement("tr");
+            var thpalavra= document.createElement("th");
+            var thqtd = document.createElement("th");
+            var thporc = document.createElement("th");
+            
+            
+            thpalavra.innerHTML = "Palavra          |   ";
+            thqtd.innerHTML = "  Qtd de letras A/a |  ";
+            thporc.innerHTML = "  Porcentagem de letras ’A/a’"
+            
+            var tBody = document.createElement("tbody");
+            
+            //for (var i=0; i < vetObj.length; i++) {
+                var tr = document.createElement("tr");
+                var tdpalavra = document.createElement("td");
+                var tdqtd = document.createElement("td");
+                var tdporc = document.createElement("th");
+            
+                tdpalavra.innerHTML = palavras;
+                tdqtd.innerHTML = qtd;
+                tdporc.innerHTML =  (porc+" %");
+                tr.appendChild(tdpalavra);
+                tr.appendChild(tdqtd);
+                tr.appendChild(tdporc);
+
+                tBody.appendChild(tr);
+
+            //}
+            tHead.appendChild(thpalavra);
+            tHead.appendChild(thqtd);
+            tHead.appendChild(thporc);
+            table.appendChild(tHead);
+            table.appendChild(tBody);
+            var div = document.querySelector(".tabela");
+            div.appendChild(table);
+        }
+
+
+
+
+                
+                
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+            
+        </script>
+    
+</body>
+</html>
