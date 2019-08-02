@@ -34,12 +34,12 @@
         // node the contents of the <td>, and put the <td> at
         // the end of the table row
         var cell = document.createElement("td");
-        var cellText = document.createTextNode(string+j+", column "+i);
+        var cellText = document.createTextNode("cell is row "+j+", column "+i);
         cell.appendChild(cellText);
         row.appendChild(cell);
     }
 
-        // add the row to the end of the table body
+
         tblBody.appendChild(row);
     }
 

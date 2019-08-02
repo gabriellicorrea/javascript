@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ex11</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+
+    <!--Exercıcio 13 Sabe-se que a funcao setTimeout(f,i) vai executar a funcao f a
+        cada i milisegundos. Faca com que uma div de id dv1 fique alternando entre
+        as cores amarelo e vermelho a cada 400 milisegundos.
+    -->
+
+        <div id="divid">Muda cor da Div</div>
+        <button onclick="setTimeout()">muda</button>
+        <script>
+        
+            function setTimeout(f,i){ 
+                var div =  document.getElementById('divid')
+                var colors = ["red", "yellow"];
+                i = 0;
+                setInterval(function f(){
+                    i++
+                    if(i==colors.length){
+                        i=0
+                    }
+                div.style.backgroundColor = colors[i];
+                },400);
+            }
+            
+        </script>
+    
+</body>
+</html>
