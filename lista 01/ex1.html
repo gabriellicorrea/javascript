@@ -10,16 +10,33 @@
 </head>
 <body>
     
+    <button onclick="contarVogais()">Ok</button>
 
     <!--Faca uma funcao que retorne a quantidade de caracteres 
     numericos somado a quantidade de vogais de uma string recebida via parametro.-->
     <script>
 
-        var str = "ola"
-        var tamanho = str.length
-    
+        function contarVogais(str){
+            str = "galera";
+            var c = 0;
+            var total = 0
             
-        alert("o tamanho eh " + tamanho)
+            for(var i=0; i<=str.length; i++){
+                if(str[i]==='a'|| str[i]==='e'||str[i]==='i'|| str[i]==='o'|| str[i]==='u' || 
+                str[i]==='A'|| str[i]==='E'||str[i]==='I'|| str[i]==='O'|| str[i]==='U'){
+                    c = c + 1
+                }
+            }
+
+            total = str.length + c
+
+
+    
+            alert("A palavra *" + str + "* tem "+ c + " vogais")
+            alert("o tamanho dela é " + str.length)
+            alert("total de caracteres numericos"+ total)
+        }
+
         //incompleto!
     </script>
 </body>
