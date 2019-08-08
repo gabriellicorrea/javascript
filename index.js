@@ -31,4 +31,4 @@ function func(){
         console.log(this.a)
     }, 1000)
 }
-func()
+func() 
